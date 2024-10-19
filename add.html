@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Product</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="logo">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-grdFXsPyrOwsI6QvhYl9wwPOmpFVDH.png" alt="Consumer Compass Logo">
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="auth-buttons">
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Second Navbar (Category List) -->
+    <div class="category-navbar">
+        <a href="#">Laptop</a>
+        <a href="#">Smartphone</a>
+        <a href="#">Smartwatch</a>
+        <a href="#">Headphones</a>
+        <a href="#">AirPods</a>
+        <a href="#">Tablet</a>
+        <a href="#">AC</a>
+        <a href="#">Camera</a>
+    </div>
+    <div class="container">
+        <h2>Product Information</h2>
+
+        <!-- Section 1: Product Information -->
+        <!-- <div class="section-title">Product Information</div> -->
+        <label for="category">Product Category</label>
+        <select id="category" required>
+            <option value="">Select category</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Smartphone">Smartphone</option>
+            <option value="Smartwatch">Smartwatch</option>
+            <option value="Headphones">Headphones</option>
+            <option value="AirPods">AirPods</option>
+            <option value="Tablet">Tablet</option>
+            <option value="AC">AC</option>
+            <option value="Camera">Camera</option>
+        </select>
+
+        <label for="productTitle">Product Title</label>
+        <input type="text" id="productTitle" placeholder="Enter product title" required>
+
+        <!-- Section 2: Product Details -->
+        <!-- <div class="section-title">Product Details</div> -->
+        <label for="productImage">Choose Product Image</label>
+        <input type="file" id="productImage" accept="image/*" onchange="previewImage(event)">
+        <img id="imagePreview" class="image-preview" alt="Product Image Preview">
+
+        <label for="price">Price</label>
+        <input type="number" id="price" placeholder="Enter price" required>
+
+        <!-- Section 3: Purchase Links -->
+        <!-- <div class="section-title">Purchase Links</div> -->
+        <label for="amazonLink">Amazon Link</label>
+        <input type="url" id="amazonLink" placeholder="Enter Amazon product link">
+
+        <label for="flipkartLink">Flipkart Link</label>
+        <input type="url" id="flipkartLink" placeholder="Enter Flipkart product link">
+
+        <button type="submit">Add Product</button>
+    </div>
+
+    <script>
+        // Function to preview the uploaded image
+        function previewImage(event) {
+            const image = document.getElementById('imagePreview');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
