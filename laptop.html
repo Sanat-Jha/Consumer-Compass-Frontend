@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop Review</title>
+  <link rel="stylesheet" href="laptop.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Product Info -->
+    <div class="product">
+      <h1>Dell XPS 13</h1>
+      <div class="product-image">
+        <img src="https://i5.walmartimages.com/asr/cf778ac0-6926-4ba2-b08f-e02db5646b64.5501446c74296996b99743d39e521091.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"" alt="Dell XPS 13">
+      </div>
+      <p class="price">Price: $999</p>
+    </div>
+
+    <!-- Review Form -->
+    <div class="review-section">
+      <h2>Submit Your Review</h2>
+      <form id="reviewForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <select id="rating" name="rating" required>
+            <option value="">Select...</option>
+            <option value="1">★☆☆☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="4">★★★★☆</option>
+            <option value="5">★★★★★</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review">Review:</label>
+          <textarea id="review" name="review" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Review</button>
+      </form>
+    </div>
+
+    <!-- User Reviews
+    <div class="user-reviews">
+      <h2>User Reviews</h2>
+      <ul id="reviewsList"></ul>
+    </div>
+  </div> -->
+
+  <script src="laptop.js"></script>
+</body>
+</html>

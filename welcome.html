@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Compass</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            height: 100%;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 1rem;
+        }
+        .logo {
+            width: 600px;
+            height: 200px;
+            position: relative;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.25rem;
+            color: #d1d5db;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            font-family: Georgia, serif;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: Georgia, serif;
+            font-size: 0.875rem;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-grdFXsPyrOwsI6QvhYl9wwPOmpFVDH.png" alt="Consumer Compass Logo">
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <h1>Welcome to Consumer Compass</h1>
+                <p>Guiding you through informed decisions</p>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">Electronic Gadgets ▼</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Computer</a>
+                    <a href="#">Laptop</a>
+                    <a href="#">Smartphone</a>
+                    <a href="#">Smartwatch</a>
+                    <a href="#">Headphones</a>
+                    <a href="#">Air pods</a>
+                    <a href="#">Tablet</a>
+                    <a href="#">AC</a>
+                    <a href="#">Camera</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

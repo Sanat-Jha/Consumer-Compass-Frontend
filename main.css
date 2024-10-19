@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Top Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #000000, #000000);
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar img {
+    width: 80px;
+    /* Adjust this value to match the desired logo size */
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    width: 55%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.auth-buttons a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #100000;
+    border-radius: 5px;
+}
+
+.auth-buttons a:hover {
+    background-color: #000000;
+}
+
+/* Second Navbar */
+.category-navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    padding: 10px 0;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.category-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.category-navbar a:hover {
+    background-color: #666;
+    border-radius: 5px;
+}
+
+/* Container for the two boxes */
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    /* padding: 20px;
+    margin-top: 20px; */
+    background-color: rgb(0, 0, 0);
+    border-color: #100000;
+}
+
+.box #tl {
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    text-align: left;
+    
+}
+
+ .box #bl {
+    color: #0e0e0e;
+    text-align: left;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    /* margin-top: -10px; */
+    margin-left: -5x;
+}
+
+#c {
+    color: #01db0c;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    /* margin-top: 10px; */
+}
+
+#br {
+    color: #000000;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    /* margin-top: -10px; */
+}
+
+
+
+
+
+
+/* Styling for individual boxes */
+.box {
+    width: 42%;
+    margin-left: 0%;
+    
+    /* Each box takes up 45% of the available width */
+    height: 450px;
+    align-items: center;
+
+    background-color: #ffffff;
+    /* Light gray background */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    text-align:left;
+}
+
+.left {
+    margin-left: 10px;
+}
+
+/* Make the boxes responsive */
+@media screen and (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        /* Stack the boxes on smaller screens */
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        /* Boxes take up more width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
